@@ -11,11 +11,13 @@ const [beers, setBeers] = useState([])
 // filters through the beers if includes the search text!
 const filteredBeers = beers.filter( beer => beer.name.toLowerCase().includes(searchText.toLowerCase()));
 
+//Making the api call and storing the data in beers state
 const url = 'https://api.punkapi.com/v2/beers';
 useEffect( () => {
   fetch(url)
   .then(response => response.json())
   .then(data => {
+    //storing the data in state
     return setBeers(data)      
   })
 },[url]);
