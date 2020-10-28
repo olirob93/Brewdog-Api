@@ -27,7 +27,7 @@ const url = 'https://api.punkapi.com/v2/beers';
     <section>
       <NavBar setSearchText={setSearchText}/>
     </section>
-      <CardList searchText={searchText} filteredBeers={filteredBeers} />    
+      <CardList filteredBeers={filteredBeers} />    
     </>
   );
 }
