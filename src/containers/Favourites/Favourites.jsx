@@ -1,9 +1,13 @@
 import React from "react";
 
-const Favourites = () => {
+const Favourites = (props) => {
+
+  console.log(props)
+
   return (
     <>
-      <p>Favourites works</p>
+      <h1>Hello {}</h1>
+      <p>You are now logged in with {} and can save Favourites to this page</p>
     </>
   );
 };

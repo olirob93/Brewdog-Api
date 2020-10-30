@@ -26,7 +26,7 @@ const getSignInOutJsx = () => {
         <img src={logo} alt="this is the brew dog logo"/>
       </Link>
       <SearchBar setSearchText={setSearchText}/>
-      <Link to='favourite'>
+      <Link to='favourites'>
         <FontAwesomeIcon icon='bookmark'/>
       </Link>
       {getSignInOutJsx()}

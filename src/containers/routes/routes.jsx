@@ -9,7 +9,7 @@ const Routes = (props) => {
         <Router>
             <Dashboard path='/' filteredBeers={props.filteredBeers} />
             <PrivateRoutes path='/' user={props.user}>
-                <Favourites path='favourites'/>
+                <Favourites user={props.user} path='favourites'/>
             </PrivateRoutes> 
         </Router>
     )
