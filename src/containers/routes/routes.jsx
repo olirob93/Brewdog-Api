@@ -5,11 +5,20 @@ import Favourites from '../Favourites';
 import PrivateRoutes from '../PrivateRoutes';
 
 const Routes = (props) => {
+
+const { filteredBeers, user} = props
+
     return(
         <Router>
-            <Dashboard path='/' filteredBeers={props.filteredBeers} />
-            <PrivateRoutes path='/' user={props.user}>
-                <Favourites user={props.user} path='favourites'/>
+            <Dashboard
+                path='/'
+                filteredBeers={filteredBeers}
+            />
+            <PrivateRoutes path='/' user={user}>
+                <Favourites
+                    path='favourites'
+                    user={user}
+                />
             </PrivateRoutes> 
         </Router>
     )

@@ -6,17 +6,13 @@ import libary from './data/fa-libary';
 
 const App = () => {
 
+//***** STATES *****
 const [searchText, setSearchText] = useState('')
-
 const [beers, setBeers] = useState([])
-
 const [user, setUser] =useState(null)
 
-// filters through the beers if includes the search text!
-const filteredBeers = beers.filter( beer => beer.name.toLowerCase().includes(searchText.toLowerCase()));
-
-//Making the api call and storing the data in beers state
-const url = 'https://api.punkapi.com/v2/beers';
+//****** LIFECYCLE METHODS *****
+const url = 'https://api.punkapi.com/v2/beers'; //Making the api call and storing the data in beers state
   useEffect( () => {
     fetch(url)
     .then(response => response.json())
@@ -25,6 +21,12 @@ const url = 'https://api.punkapi.com/v2/beers';
       return setBeers(data)      
     })
   },[url]);
+
+  useEffect(() => {
+    getUser();
+  },[])
+
+ //**** HELPER FUNCTIONS ****/ 
 
   const signIn = () => {
     firebase
@@ -54,24 +56,23 @@ const url = 'https://api.punkapi.com/v2/beers';
     });
   };
 
-  useEffect(() => {
-    getUser();
-  })
+// filters through the beers if includes the search text!
+const filteredBeers = beers.filter( beer => beer.name.toLowerCase().includes(searchText.toLowerCase()));  
 
+
+//****** RETURN STATEMENT *****/
   return (
     <>
-    <section>
       <NavBar
-      setSearchText={setSearchText}
+        setSearchText={setSearchText}
+        user={user}
+        signIn={signIn}
+        signOut={signOut}
+      />        
+      <Routes
+      filteredBeers={filteredBeers}
       user={user}
-      signIn={signIn}
-      signOut={signOut}
-      />
-    </section>
-    <Routes
-    filteredBeers={filteredBeers}
-    user={user}
-    />  
+      />  
     </>
   );
 }

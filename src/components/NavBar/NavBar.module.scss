@@ -1,12 +1,14 @@
 .navCont {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     padding: 10px 0px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     background-image: url('../../assets/images/alban-martel-nhX8QhXMBkM-unsplash.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+
 
     img {
         height: 100px;
@@ -14,7 +16,7 @@
     } 
     
     a {
-        color: #fff;
+        color: blue;
         font-size: 50px;
     }
     

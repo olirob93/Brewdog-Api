@@ -21,16 +21,16 @@ const getSignInOutJsx = () => {
 
   return (
     <>
-    <div className={styles.navCont}>
-      <Link to='/'>
-        <img src={logo} alt="this is the brew dog logo"/>
-      </Link>
-      <SearchBar setSearchText={setSearchText}/>
-      <Link to='favourites'>
-        <FontAwesomeIcon icon='bookmark'/>
-      </Link>
-      {getSignInOutJsx()}
-    </div>    
+      <div className={styles.navCont}>
+        <Link to='/'>
+          <img src={logo} alt="this is the brew dog logo"/>
+        </Link>
+        <SearchBar setSearchText={setSearchText}/>
+        <Link to='favourites'>
+          <FontAwesomeIcon icon='bookmark'/>
+        </Link>
+        {getSignInOutJsx()}
+      </div>    
     </>
   );
 };

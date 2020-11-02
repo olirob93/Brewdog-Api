@@ -5,10 +5,14 @@ const SearchBar = (props) => {
 
   return (
     <>
-    <div>
-      <input type="search" placeholder='Search for Beer' onChange= { (e) => { props.setSearchText(e.target.value)} }/>
-    </div>
-      
+      <div>
+        <input
+          className={styles.input}
+          type="search"
+          placeholder='Search for Beer'
+          onChange= { (e) => { props.setSearchText(e.target.value)} }
+        />
+      </div>
     </>
   );
 };
