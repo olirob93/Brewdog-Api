@@ -14,7 +14,7 @@ const { filteredBeers, user} = props
                 path='/'
                 filteredBeers={filteredBeers}
             />
-            <PrivateRoutes path='/' user={user}>
+            <PrivateRoutes path='/'>
                 <Favourites
                     path='favourites'
                     user={user}
