@@ -21,6 +21,20 @@
     }
     
 }
+@media (min-width: 900px) {
+    .navCont{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100%;
+
+        .favLink{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
 
 
 

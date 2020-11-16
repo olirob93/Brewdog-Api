@@ -4,5 +4,11 @@
     flex-wrap: wrap;
     justify-content: center;
     background-color: #F9F7F3;
-   
+}
+
+@media (min-width:900px){
+    .cardList{
+        margin-left: 20%;
+        width: 80%;
+    }
 }
