@@ -20,11 +20,12 @@ const url = 'https://api.punkapi.com/v2/beers'; //Making the api call and storin
       //storing the data in state
       return setBeers(data)      
     })
-  },[url]);
+  },[]);
 
   useEffect(() => {
     getUser();
-  },[])
+    console.log(user) //this logs null before it logs the user there is a delay does this need to be async?
+  },[user])
 
  //**** HELPER FUNCTIONS ****/ 
 
