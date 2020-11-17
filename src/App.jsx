@@ -22,10 +22,9 @@ const url = 'https://api.punkapi.com/v2/beers'; //Making the api call and storin
     })
   },[]);
 
-  useEffect(() => {
-    getUser();
-    console.log(user) //this logs null before it logs the user there is a delay does this need to be async?
-  },[user])
+  useEffect( async () => {
+    await getUser();
+  },[])
 
  //**** HELPER FUNCTIONS ****/ 
 

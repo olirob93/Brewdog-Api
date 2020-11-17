@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./GoogleBtn.module.scss";
 
-const googleBtn = () => {
+const GoogleBtn = (props) => {
+  console.log(props.user)
   return (
     <>
       <div className={styles.googleBtn}>
@@ -14,4 +15,4 @@ const googleBtn = () => {
   );
 };
 
-export default googleBtn;
+export default GoogleBtn;
