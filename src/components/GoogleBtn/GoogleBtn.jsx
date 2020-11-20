@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./GoogleBtn.module.scss";
 
-const GoogleBtn = (props) => {
-  console.log(props.user)
+const GoogleBtn = () => {
   return (
     <>
       <div className={styles.googleBtn}>

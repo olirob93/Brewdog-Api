@@ -9,7 +9,7 @@ const App = () => {
 //***** STATES *****
 const [searchText, setSearchText] = useState('')
 const [beers, setBeers] = useState([])
-const [user, setUser] =useState(null)
+const [user, setUser] = useState(null)
 
 //****** LIFECYCLE METHODS *****
 const url = 'https://api.punkapi.com/v2/beers'; //Making the api call and storing the data in beers state
@@ -22,8 +22,8 @@ const url = 'https://api.punkapi.com/v2/beers'; //Making the api call and storin
     })
   },[]);
 
-  useEffect( async () => {
-    await getUser();
+  useEffect(() => {
+    getUser();
   },[])
 
  //**** HELPER FUNCTIONS ****/ 
@@ -50,11 +50,14 @@ const url = 'https://api.punkapi.com/v2/beers'; //Making the api call and storin
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         setUser(user);
+        console.log('setting user to state')
       } else {
         setUser(null);
+        console.log('setting user to Null')
       }
     });
   };
+
 
 // filters through the beers if includes the search text!
 const filteredBeers = beers.filter( beer => beer.name.toLowerCase().includes(searchText.toLowerCase()));  

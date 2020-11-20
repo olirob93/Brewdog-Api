@@ -15,10 +15,10 @@ const getSignInOutJsx = () => {
   return user ? (
     <span onClick={signOut}><GoogleBtnSignOut/></span>
   ) : (
-    <span onClick={signIn}><GoogleBtn user={user}/></span>
+    <span onClick={signIn}><GoogleBtn/></span>
   );
 };
-console.log(user)
+
   return (
     <>
       <div className={styles.navCont}>
